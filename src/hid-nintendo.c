@@ -1740,7 +1740,7 @@ static int joycon_home_led_brightness_set(struct led_classdev *led,
 	ret = joycon_send_subcmd(ctlr, req, 5, HZ/4);
 	mutex_unlock(&ctlr->output_mutex);
 
-	return ret;
+	return 0;//ret;
 }
 
 static const char * const joycon_player_led_names[] = {
